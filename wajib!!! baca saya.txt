@@ -1,0 +1,8 @@
+admin
+
+email: admin@gmail.com
+password: admin
+
+user
+user: user@gmail.com
+password: user
