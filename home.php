@@ -119,18 +119,17 @@
     <!-- Hero Section -->
     <div class="hero">
         <div>
-            <h1>Welcome to TEKAJE Class</h1>
-            <p>Your journey in Technology starts here.</p>
+            <h1>Welcome to Absensi Online</h1>
+            <p>Absensi ini digunakan oleh guru .</p>
             <!-- <button>Explore More</button> -->
         </div>
     </div>
 
     <!-- About Section -->
     <div class="about">
-        <h1>About Our Class</h1>
+        <h1>Tentang Absensi</h1>
         <p>
-            Kelas TKJ (Teknik Komputer Jaringan) offers a comprehensive learning experience in computer networking and technology. 
-            We focus on equipping our students with the best knowledge in networking, programming, and technology trends to prepare them for a successful career in IT.
+        Aplikasi Absensi Siswa ini merupakan solusi digital yang dirancang khusus untuk mempermudah guru dalam memantau kehadiran siswa. Aplikasi ini memberikan kemudahan dalam pencatatan, pengelolaan, dan pelaporan data absensi siswa. Aplikasi ini dapat diakses melalui perangkat mobile maupun desktop, sehingga guru dapat melakukan absensi kapan saja dan di mana saja.
         </p>
     </div>
 </div>

@@ -1,7 +1,3 @@
-
-
-
-
 <?php include "template/header-admin.php" ?>
 <?php
 
@@ -22,23 +18,33 @@ if ($conn->connect_error) {
 $jurusanQuery = "SELECT * FROM jurusan";
 $jurusanResult = $conn->query($jurusanQuery);
 
+// Proses penambahan siswa
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['tambah_siswa'])) {
+    $nama_siswa = $_POST['nama_siswa'];
+    $jurusan_id = $_POST['jurusan_id'];
+
+    $siswaInsertQuery = "INSERT INTO siswa (nama, jurusan_id) VALUES ('$nama_siswa', '$jurusan_id')";
+    if ($conn->query($siswaInsertQuery) === TRUE) {
+        echo "";
+    } else {
+        echo "Error: " . $siswaInsertQuery . "<br>" . $conn->error;
+    }
+}
+
+// Proses penghapusan siswa
+if (isset($_GET['hapus_siswa_id'])) {
+    $siswa_id = $_GET['hapus_siswa_id'];
+    $hapusQuery = "DELETE FROM siswa WHERE id = $siswa_id";
+    if ($conn->query($hapusQuery) === TRUE) {
+        echo "";
+    } else {
+        echo "Error: " . $hapusQuery . "<br>" . $conn->error;
+    }
+}
+
 // Mengambil data siswa
 $siswaQuery = "SELECT siswa.id, siswa.nama, jurusan.nama AS jurusan FROM siswa JOIN jurusan ON siswa.jurusan_id = jurusan.id";
 $siswaResult = $conn->query($siswaQuery);
-
-// Proses absensi
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $siswa_id = $_POST['siswa_id'];
-    $tanggal = $_POST['tanggal'];
-    $status = $_POST['status'];
-
-    $absensiQuery = "INSERT INTO absensi (siswa_id, tanggal, status) VALUES ('$siswa_id', '$tanggal', '$status')";
-    if ($conn->query($absensiQuery) === TRUE) {
-        echo "Absensi berhasil ditambahkan";
-    } else {
-        echo "Error: " . $absensiQuery . "<br>" . $conn->error;
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -49,53 +55,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Absensi Siswa</title>
 </head>
 <body>
-  
 
     <h2>Tambah Siswa</h2>
-<form method="POST" action="tambah_siswa.php">
-    <label for="nama_siswa">Nama Siswa:</label>
-    <input type="text" name="nama_siswa" required><br>
+    <form method="POST" action="">
+        <label for="nama_siswa">Nama Siswa:</label>
+        <input type="text" name="nama_siswa" required><br>
 
-    <label for="jurusan_id">Jurusan:</label>
-    <select name="jurusan_id" required>
-        <?php
-        // Reset jurusanResult pointer
-        $jurusanResult->data_seek(0);
-        while($row = $jurusanResult->fetch_assoc()): ?>
-            <option value="<?= $row['id'] ?>"><?= $row['nama'] ?></option>
-        <?php endwhile; ?>
-    </select><br>
-
-    <button type="submit">Tambah Siswa</button>
-</form>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Absensi Siswa</title>
-</head>
-<body>
-    <h1>Absensi Siswa</h1>
-    <form method="POST">
-        <input type="hidden" name="action" value="insert">
-        <label for="siswa_id">Nama Siswa:</label>
-        <select name="siswa_id" required>
-            <?php while($row = $siswaResult->fetch_assoc()): ?>
-                <option value="<?= $row['id'] ?>"><?= $row['nama'] ?> (<?= $row['jurusan'] ?>)</option>
+        <label for="jurusan_id">Jurusan:</label>
+        <select name="jurusan_id" required>
+            <?php
+            // Reset jurusanResult pointer
+            $jurusanResult->data_seek(0);
+            while($row = $jurusanResult->fetch_assoc()): ?>
+                <option value="<?= $row['id'] ?>"><?= $row['nama'] ?></option>
             <?php endwhile; ?>
         </select><br>
 
-        
+        <button type="submit" name="tambah_siswa">Tambah Siswa</button>
+    </form>
 
+    <h2>Daftar Siswa</h2>
+    <table border="1">
+        <tr>
+            <th>Nama</th>
+            <th>Jurusan</th>
+            <th>Aksi</th>
+        </tr>
+        <?php while($row = $siswaResult->fetch_assoc()): ?>
+        <tr>
+            <td><?= $row['nama'] ?></td>
+            <td><?= $row['jurusan'] ?></td>
+            <td>
+                <a href="?hapus_siswa_id=<?= $row['id'] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus siswa ini?')">Hapus</a>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
 
     <?php $conn->close(); ?>
 </body>
 </html>
-
-    
-
-

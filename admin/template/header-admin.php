@@ -40,7 +40,7 @@
     </nav>
     <div class="content">
         <ul class="sidemenu">
-            <li><a href="admin.php">Dashboard</a></li>
+            <li><a href="admin.php">Home</a></li>
             <li><a href="users-management.php">users management</a></li>
             <!-- <li><a href="kegiatan-admin.php">kegiatan</a></li> -->
             <!-- <li><a href="jabatan.php">Jurusan</a></li> -->
