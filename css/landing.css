@@ -1,0 +1,1244 @@
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f9f4;
+    /* Background hijau lembut */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+
+
+/* Container styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container.mx {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #388e3c;
+    /* Warna hijau lebih gelap untuk heading */
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #81c784;
+    /* Hijau cerah */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    margin: 20px 0;
+}
+
+.cta-button:hover {
+    background: #66bb6a;
+    /* Aksen hijau hover */
+    transform: translateY(-3px);
+}
+
+/* Program list styling */
+.program-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.program-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+.program-item:hover {
+    transform: scale(1.05);
+}
+
+.program-item h3 {
+    font-size: 1.4em;
+    color: #2e7d32;
+    /* Hijau lebih tua */
+    margin-bottom: 15px;
+}
+
+.program-item p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Gallery styling */
+.gallery {
+    margin-top: 40px;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #388e3c;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2e7d32;
+    /* Hijau gelap untuk footer */
+    color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        padding: 20px 10px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .program-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .program-item {
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    .gallery h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* Kadence Base CSS */
+:root {
+    --global-palette1: #02ab68;
+    --global-palette2: #008f72;
+    --global-palette3: #1A202C;
+    --global-palette4: #2D3748;
+    --global-palette5: #4A5568;
+    --global-palette6: #718096;
+    --global-palette7: #EDF2F7;
+    --global-palette8: #F7FAFC;
+    --global-palette9: #ffffff;
+    --global-palette-highlight: var(--global-palette1);
+    --global-palette-highlight-alt: var(--global-palette2);
+    --global-palette-highlight-alt2: var(--global-palette9);
+    --global-palette-btn-bg: var(--global-palette1);
+    --global-palette-btn-bg-hover: var(--global-palette2);
+    --global-palette-btn: var(--global-palette9);
+    --global-palette-btn-hover: var(--global-palette9);
+    --global-body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --global-heading-font-family: inherit;
+    --global-primary-nav-font-family: inherit;
+    --global-fallback-font: sans-serif;
+    --global-content-width: 1290px;
+}
+
+:root body.kadence-elementor-colors {
+    --e-global-color-kadence1: var(--global-palette1);
+    --e-global-color-kadence2: var(--global-palette2);
+    --e-global-color-kadence3: var(--global-palette3);
+    --e-global-color-kadence4: var(--global-palette4);
+    --e-global-color-kadence5: var(--global-palette5);
+    --e-global-color-kadence6: var(--global-palette6);
+    --e-global-color-kadence7: var(--global-palette7);
+    --e-global-color-kadence8: var(--global-palette8);
+    --e-global-color-kadence9: var(--global-palette9);
+}
+
+:root .has-theme-palette-1-background-color {
+    background-color: var(--global-palette1);
+}
+
+:root .has-theme-palette-1-color {
+    color: var(--global-palette1);
+}
+
+:root .has-theme-palette-2-background-color {
+    background-color: var(--global-palette2);
+}
+
+:root .has-theme-palette-2-color {
+    color: var(--global-palette2);
+}
+
+:root .has-theme-palette-3-background-color {
+    background-color: var(--global-palette3);
+}
+
+:root .has-theme-palette-3-color {
+    color: var(--global-palette3);
+}
+
+:root .has-theme-palette-4-background-color {
+    background-color: var(--global-palette4);
+}
+
+:root .has-theme-palette-4-color {
+    color: var(--global-palette4);
+}
+
+:root .has-theme-palette-5-background-color {
+    background-color: var(--global-palette5);
+}
+
+:root .has-theme-palette-5-color {
+    color: var(--global-palette5);
+}
+
+:root .has-theme-palette-6-background-color {
+    background-color: var(--global-palette6);
+}
+
+:root .has-theme-palette-6-color {
+    color: var(--global-palette6);
+}
+
+:root .has-theme-palette-7-background-color {
+    background-color: var(--global-palette7);
+}
+
+:root .has-theme-palette-7-color {
+    color: var(--global-palette7);
+}
+
+:root .has-theme-palette-8-background-color {
+    background-color: var(--global-palette8);
+}
+
+:root .has-theme-palette-8-color {
+    color: var(--global-palette8);
+}
+
+:root .has-theme-palette-9-background-color {
+    background-color: var(--global-palette9);
+}
+
+:root .has-theme-palette-9-color {
+    color: var(--global-palette9);
+}
+
+:root .has-theme-palette1-background-color {
+    background-color: var(--global-palette1);
+}
+
+:root .has-theme-palette1-color {
+    color: var(--global-palette1);
+}
+
+:root .has-theme-palette2-background-color {
+    background-color: var(--global-palette2);
+}
+
+:root .has-theme-palette2-color {
+    color: var(--global-palette2);
+}
+
+:root .has-theme-palette3-background-color {
+    background-color: var(--global-palette3);
+}
+
+:root .has-theme-palette3-color {
+    color: var(--global-palette3);
+}
+
+:root .has-theme-palette4-background-color {
+    background-color: var(--global-palette4);
+}
+
+:root .has-theme-palette4-color {
+    color: var(--global-palette4);
+}
+
+:root .has-theme-palette5-background-color {
+    background-color: var(--global-palette5);
+}
+
+:root .has-theme-palette5-color {
+    color: var(--global-palette5);
+}
+
+:root .has-theme-palette6-background-color {
+    background-color: var(--global-palette6);
+}
+
+:root .has-theme-palette6-color {
+    color: var(--global-palette6);
+}
+
+:root .has-theme-palette7-background-color {
+    background-color: var(--global-palette7);
+}
+
+:root .has-theme-palette7-color {
+    color: var(--global-palette7);
+}
+
+:root .has-theme-palette8-background-color {
+    background-color: var(--global-palette8);
+}
+
+:root .has-theme-palette8-color {
+    color: var(--global-palette8);
+}
+
+:root .has-theme-palette9-background-color {
+    background-color: var(--global-palette9);
+}
+
+:root .has-theme-palette9-color {
+    color: var(--global-palette9);
+}
+
+body {
+    background: var(--global-palette8);
+}
+
+body,
+input,
+select,
+optgroup,
+textarea {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.6;
+    font-family: var(--global-body-font-family);
+    color: var(--global-palette4);
+}
+
+.content-bg,
+body.content-style-unboxed .site {
+    background: var(--global-palette9);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--global-heading-font-family);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.5;
+    color: var(--global-palette3);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--global-palette3);
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--global-palette3);
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--global-palette4);
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--global-palette4);
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--global-palette5);
+}
+
+.site-container,
+.site-header-row-layout-contained,
+.site-footer-row-layout-contained,
+.entry-hero-layout-contained,
+.comments-area,
+.alignfull>.wp-block-cover__inner-container,
+.alignwide>.wp-block-cover__inner-container {
+    max-width: 1290px;
+}
+
+.content-width-narrow .content-container.site-container,
+.content-width-narrow .hero-container.site-container {
+    max-width: 842px;
+}
+
+@media all and (min-width: 1520px) {
+    .site .content-container .alignwide {
+        margin-left: -115px;
+        margin-right: -115px;
+        width: unset;
+        max-width: unset;
+    }
+}
+
+@media all and (min-width: 1102px) {
+    .content-width-narrow .site .content-container .alignwide {
+        margin-left: -130px;
+        margin-right: -130px;
+        width: unset;
+        max-width: unset;
+    }
+}
+
+.content-style-boxed .site .entry-content .alignwide {
+    margin-left: -2rem;
+    margin-right: -2rem;
+}
+
+@media all and (max-width: 1024px) {
+    .content-style-boxed .site .entry-content .alignwide {
+        margin-left: -2rem;
+        margin-right: -2rem;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .content-style-boxed .site .entry-content .alignwide {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+    }
+}
+
+.content-area {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+@media all and (max-width: 1024px) {
+    .content-area {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .content-area {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.entry-content-wrap {
+    padding: 2rem;
+}
+
+@media all and (max-width: 1024px) {
+    .entry-content-wrap {
+        padding: 2rem;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .entry-content-wrap {
+        padding: 1.5rem;
+    }
+}
+
+.loop-entry .entry-content-wrap {
+    padding: 2rem;
+}
+
+@media all and (max-width: 1024px) {
+    .loop-entry .entry-content-wrap {
+        padding: 2rem;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .loop-entry .entry-content-wrap {
+        padding: 1.5rem;
+    }
+}
+
+.has-sidebar:not(.has-left-sidebar) .content-container {
+    grid-template-columns: 1fr 29%;
+}
+
+.has-sidebar.has-left-sidebar .content-container {
+    grid-template-columns: 29% 1fr;
+}
+
+.primary-sidebar.widget-area .widget {
+    margin-bottom: 0.66em;
+    color: var(--global-palette4);
+}
+
+.primary-sidebar.widget-area .widget-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--global-palette3);
+}
+
+.primary-sidebar.widget-area {
+    background: #ffffff;
+    padding: 28px 28px 28px 28px;
+}
+
+.site-branding a.brand img {
+    max-width: 400px;
+}
+
+.site-branding a.brand img.svg-logo-image {
+    width: 400px;
+}
+
+@media all and (max-width: 1024px) {
+    .site-branding a.brand img {
+        max-width: 63px;
+    }
+
+    .site-branding a.brand img.svg-logo-image {
+        width: 63px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .site-branding a.brand img {
+        max-width: 63px;
+    }
+
+    .site-branding a.brand img.svg-logo-image {
+        width: 63px;
+    }
+}
+
+.site-branding {
+    padding: 0px 0px 0px 0px;
+}
+
+.site-branding .site-title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--global-palette3);
+}
+
+.site-branding .site-description {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--global-palette5);
+}
+
+#masthead,
+#masthead .kadence-sticky-header.item-is-fixed:not(.item-at-start):not(.site-header-row-container),
+#masthead .kadence-sticky-header.item-is-fixed:not(.item-at-start)>.site-header-row-container-inner {
+    background: #ffffff;
+}
+
+@media all and (max-width: 767px) {
+
+    #masthead,
+    #masthead .kadence-sticky-header.item-is-fixed:not(.item-at-start):not(.site-header-row-container),
+    #masthead .kadence-sticky-header.item-is-fixed:not(.item-at-start)>.site-header-row-container-inner {
+        background: var(--global-palette1);
+    }
+}
+
+.site-main-header-wrap .site-header-row-container-inner {
+    background: #02ab68;
+}
+
+.site-main-header-inner-wrap {
+    min-height: 125px;
+}
+
+@media all and (max-width: 767px) {
+    .site-main-header-inner-wrap {
+        min-height: 93px;
+    }
+}
+
+.site-top-header-wrap .site-header-row-container-inner {
+    background: #048d58;
+}
+
+.site-top-header-inner-wrap {
+    min-height: 36px;
+}
+
+.site-bottom-header-wrap .site-header-row-container-inner {
+    background: #008f72;
+    border-bottom: 0px none var(--global-palette1);
+}
+
+.site-bottom-header-inner-wrap {
+    min-height: 0px;
+}
+
+#masthead .kadence-sticky-header.item-is-fixed:not(.item-at-start):not(.site-header-row-container):not(.item-hidden-above),
+#masthead .kadence-sticky-header.item-is-fixed:not(.item-at-start):not(.item-hidden-above)>.site-header-row-container-inner {
+    background: var(--global-palette1);
+}
+
+@media all and (min-width: 1025px) {
+    .transparent-header .entry-hero .entry-hero-container-inner {
+        padding-top: calc(36px + 125px + 0px);
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .mobile-transparent-header .entry-hero .entry-hero-container-inner {
+        padding-top: calc(36px + 125px);
+    }
+}
+
+@media all and (max-width: 767px) {
+    .mobile-transparent-header .entry-hero .entry-hero-container-inner {
+        padding-top: calc(36px + 93px);
+    }
+}
+
+.header-navigation[class*="header-navigation-style-underline"] .header-menu-container.primary-menu-container>ul>li>a:after {
+    width: calc(100% - 1.57em);
+}
+
+.main-navigation .primary-menu-container>ul>li>a {
+    padding-left: calc(1.57em / 2);
+    padding-right: calc(1.57em / 2);
+    color: #ffffff;
+}
+
+.main-navigation .primary-menu-container>ul li a {
+    font-style: normal;
+    font-weight: 400;
+}
+
+.main-navigation .primary-menu-container>ul>li>a:hover {
+    color: var(--global-palette9);
+    background: #006954;
+}
+
+.main-navigation .primary-menu-container>ul>li.current-menu-item>a {
+    color: var(--global-palette7);
+    background: rgba(1, 126, 98, 0);
+}
+
+.header-navigation[class*="header-navigation-style-underline"] .header-menu-container.secondary-menu-container>ul>li>a:after {
+    width: calc(100% - 1.2em);
+}
+
+.secondary-navigation .secondary-menu-container>ul>li>a {
+    padding-left: calc(1.2em / 2);
+    padding-right: calc(1.2em / 2);
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    color: #c9c9c9;
+}
+
+.secondary-navigation .secondary-menu-container>ul li a {
+    font-style: normal;
+    font-size: 13px;
+}
+
+.secondary-navigation .secondary-menu-container>ul>li>a:hover {
+    color: #ffffff;
+}
+
+.secondary-navigation .secondary-menu-container>ul>li.current-menu-item>a {
+    color: var(--global-palette7);
+}
+
+.header-navigation .header-menu-container ul ul {
+    background: #ffffff;
+}
+
+.header-navigation .header-menu-container ul ul li,
+.header-menu-container ul.menu>li.kadence-menu-mega-enabled>ul>li>a {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.header-navigation .header-menu-container ul ul li a {
+    width: 200px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: var(--global-palette4);
+    font-size: 12px;
+}
+
+.header-navigation .header-menu-container ul ul li a:hover {
+    color: #008f72;
+    background: var(--global-palette7);
+}
+
+.header-navigation .header-menu-container ul ul li.current-menu-item>a {
+    color: #008f72;
+    background: var(--global-palette7);
+}
+
+.mobile-toggle-open-container .menu-toggle-open {
+    color: var(--global-palette9);
+    padding: 0.4em 0.6em 0.4em 0.6em;
+    font-size: 14px;
+}
+
+.mobile-toggle-open-container .menu-toggle-open.menu-toggle-style-bordered {
+    border: 1px solid currentColor;
+}
+
+.mobile-toggle-open-container .menu-toggle-open .menu-toggle-icon {
+    font-size: 28px;
+}
+
+.mobile-toggle-open-container .menu-toggle-open:hover,
+.mobile-toggle-open-container .menu-toggle-open:focus {
+    color: var(--global-palette8);
+}
+
+.mobile-navigation ul li {
+    font-size: 14px;
+}
+
+.mobile-navigation ul li a {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.mobile-navigation ul li>a,
+.mobile-navigation ul li.menu-item-has-children>.drawer-nav-drop-wrap {
+    color: var(--global-palette8);
+}
+
+.mobile-navigation ul li.current-menu-item>a,
+.mobile-navigation ul li.current-menu-item.menu-item-has-children>.drawer-nav-drop-wrap {
+    color: var(--global-palette-highlight);
+}
+
+.mobile-navigation ul li.menu-item-has-children .drawer-nav-drop-wrap,
+.mobile-navigation ul li:not(.menu-item-has-children) a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-navigation:not(.drawer-navigation-parent-toggle-true) ul li.menu-item-has-children .drawer-nav-drop-wrap button {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#main-header .header-button {
+    border: 2px none transparent;
+}
+
+.header-social-inner-wrap {
+    font-size: 0.94em;
+    margin-top: -0.3em;
+    margin-left: calc(-0.3em / 2);
+    margin-right: calc(-0.3em / 2);
+}
+
+.header-social-wrap .header-social-inner-wrap .social-button {
+    margin-top: 0.3em;
+    margin-left: calc(0.3em / 2);
+    margin-right: calc(0.3em / 2);
+    border: 2px none transparent;
+    border-radius: 1px;
+}
+
+.header-social-wrap .header-social-inner-wrap .social-button:hover {
+    color: var(--global-palette7);
+}
+
+.header-mobile-social-inner-wrap {
+    font-size: 0.97em;
+    margin-top: -0.3em;
+    margin-left: calc(-0.3em / 2);
+    margin-right: calc(-0.3em / 2);
+}
+
+.header-mobile-social-wrap .header-mobile-social-inner-wrap .social-button {
+    margin-top: 0.3em;
+    margin-left: calc(0.3em / 2);
+    margin-right: calc(0.3em / 2);
+    border: 2px none transparent;
+    border-radius: 100px;
+}
+
+.search-toggle-open-container .search-toggle-open {
+    color: var(--global-palette9);
+}
+
+.search-toggle-open-container .search-toggle-open.search-toggle-style-bordered {
+    border: 1px solid currentColor;
+}
+
+.search-toggle-open-container .search-toggle-open .search-toggle-icon {
+    font-size: 1em;
+}
+
+.search-toggle-open-container .search-toggle-open:hover,
+.search-toggle-open-container .search-toggle-open:focus {
+    color: var(--global-palette7);
+}
+
+#search-drawer .drawer-inner {
+    background: rgba(9, 12, 16, 0.97);
+}
+
+.mobile-header-button-wrap .mobile-header-button {
+    border: 2px none transparent;
+}
+
+.site-middle-footer-wrap .site-footer-row-container-inner {
+    background: #2f333e;
+    font-style: normal;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.site-footer .site-middle-footer-wrap .site-footer-row-container-inner a:not(.button) {
+    color: var(--global-palette9);
+}
+
+.site-footer .site-middle-footer-wrap .site-footer-row-container-inner a:not(.button):hover {
+    color: var(--global-palette8);
+}
+
+.site-middle-footer-inner-wrap {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.site-middle-footer-inner-wrap .widget {
+    margin-bottom: 20px;
+}
+
+.site-middle-footer-inner-wrap .widget-area .widget-title {
+    font-style: normal;
+    color: #ffffff;
+}
+
+.site-middle-footer-inner-wrap .site-footer-section:not(:last-child):after {
+    right: calc(-20px / 2);
+}
+
+@media all and (max-width: 1024px) {
+    .site-middle-footer-inner-wrap {
+        padding-top: 15px;
+        padding-bottom: 5px;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+
+    .site-middle-footer-inner-wrap .widget {
+        margin-bottom: 5px;
+    }
+
+    .site-middle-footer-inner-wrap .site-footer-section:not(:last-child):after {
+        right: calc(-5px / 2);
+    }
+}
+
+@media all and (max-width: 767px) {
+    .site-middle-footer-inner-wrap {
+        padding-top: 15px;
+        padding-bottom: 5px;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+
+    .site-middle-footer-inner-wrap .widget {
+        margin-bottom: 5px;
+    }
+
+    .site-middle-footer-inner-wrap .site-footer-section:not(:last-child):after {
+        right: calc(-5px / 2);
+    }
+}
+
+.site-top-footer-inner-wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.site-top-footer-inner-wrap .widget {
+    margin-bottom: 30px;
+}
+
+.site-top-footer-inner-wrap .site-footer-section:not(:last-child):after {
+    right: calc(-30px / 2);
+}
+
+.site-bottom-footer-wrap .site-footer-row-container-inner {
+    background: #02ab68;
+}
+
+.site-bottom-footer-inner-wrap {
+    min-height: 10px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    grid-column-gap: 0px;
+}
+
+.site-bottom-footer-inner-wrap .widget {
+    margin-bottom: 0px;
+}
+
+.site-bottom-footer-inner-wrap .site-footer-section:not(:last-child):after {
+    right: calc(-0px / 2);
+}
+
+.footer-social-inner-wrap {
+    font-size: 1em;
+    margin-top: -0.3em;
+    margin-left: calc(-0.3em / 2);
+    margin-right: calc(-0.3em / 2);
+}
+
+.site-footer .site-footer-wrap .site-footer-section .footer-social-wrap .social-button {
+    margin-top: 0.3em;
+    margin-left: calc(0.3em / 2);
+    margin-right: calc(0.3em / 2);
+    border: 2px none transparent;
+    border-radius: 3px;
+}
+
+#colophon .footer-html {
+    font-style: normal;
+    color: #ffffff;
+}
+
+#colophon .site-footer-row-container .site-footer-row .footer-html a {
+    color: #ffffff;
+}
+
+#colophon .site-footer-row-container .site-footer-row .footer-html a:hover {
+    color: #e0e0e0;
+}
+
+#kt-scroll-up {
+    border-radius: 0px 0px 0px 0px;
+    bottom: 30px;
+    font-size: 1.2em;
+    padding: 0.4em 0.4em 0.4em 0.4em;
+}
+
+#kt-scroll-up.scroll-up-side-right {
+    right: 30px;
+}
+
+#kt-scroll-up.scroll-up-side-left {
+    left: 30px;
+}
+
+#colophon .footer-navigation .footer-menu-container>ul>li>a {
+    padding-left: calc(1.2em / 2);
+    padding-right: calc(1.2em / 2);
+    color: var(--global-palette5);
+}
+
+#colophon .footer-navigation .footer-menu-container>ul li a:hover {
+    color: var(--global-palette-highlight);
+}
+
+#colophon .footer-navigation .footer-menu-container>ul li.current-menu-item>a {
+    color: var(--global-palette3);
+}
+
+.entry-hero.page-hero-section .entry-header {
+    min-height: 200px;
+}
+
+.loop-entry.type-post h2.entry-title {
+    font-style: normal;
+    font-size: 20px;
+    color: var(--global-palette4);
+}
+
+.loop-entry.type-post .entry-taxonomies {
+    font-style: normal;
+    font-size: 13px;
+}
+
+.loop-entry.type-post .entry-taxonomies,
+.loop-entry.type-post .entry-taxonomies a {
+    color: var(--global-palette1);
+}
+
+.loop-entry.type-post .entry-taxonomies .category-style-pill a {
+    background: var(--global-palette1);
+}
+
+.loop-entry.type-post .entry-taxonomies a:hover {
+    color: var(--global-palette2);
+}
+
+.loop-entry.type-post .entry-taxonomies .category-style-pill a:hover {
+    background: var(--global-palette2);
+}
+
+.loop-entry.type-post .entry-meta {
+    font-style: normal;
+    font-size: 15px;
+}
+
+.loop-entry.type-post .entry-meta {
+    color: var(--global-palette1);
+}
+
+.loop-entry.type-post .entry-meta a:hover {
+    color: var(--global-palette2);
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-facebook:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-facebook:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-facebook:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #3b5998;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-instagram:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-instagram:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-instagram:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #517fa4;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-twitter:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-twitter:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-twitter:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #1DA1F2;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-youtube:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-youtube:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-youtube:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #FF3333;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-facebook_group:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-facebook_group:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-facebook_group:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #3b5998;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-vimeo:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-vimeo:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-vimeo:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #4EBBFF;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-pinterest:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-pinterest:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-pinterest:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #C92228;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-linkedin:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-linkedin:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-linkedin:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #4875B4;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-medium:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-medium:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-medium:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #181818;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-wordpress:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-wordpress:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-wordpress:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #00749C;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-reddit:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-reddit:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-reddit:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #ff4500;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-patreon:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-patreon:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-patreon:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #052D49;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-github:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-github:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-github:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #4078c0;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-dribbble:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-dribbble:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-dribbble:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #EA4C89;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-behance:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-behance:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-behance:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #1769ff;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-vk:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-vk:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-vk:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #45668e;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-xing:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-xing:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-xing:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #006567;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-rss:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-rss:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-rss:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #FF6200;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-email:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-email:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-email:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #181818;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-phone:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-phone:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-phone:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #181818;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-whatsapp:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-whatsapp:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-whatsapp:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #28cf54;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-google_reviews:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-google_reviews:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-google_reviews:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #DB4437;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-telegram:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-telegram:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-telegram:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #0088cc;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-yelp:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-yelp:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-yelp:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #c41200;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-trip_advisor:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-trip_advisor:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-trip_advisor:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #00af87;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-imdb:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-imdb:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-imdb:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #F5C518;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-soundcloud:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-soundcloud:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-soundcloud:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #ff7700;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-tumblr:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-tumblr:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-tumblr:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #32506d;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-tiktok:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-tiktok:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-tiktok:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #69C9D0;
+}
+
+body.social-brand-colors .social-show-brand-hover .social-link-discord:not(.ignore-brand):not(.skip):not(.ignore):hover,
+body.social-brand-colors .social-show-brand-until .social-link-discord:not(:hover):not(.skip):not(.ignore),
+body.social-brand-colors .social-show-brand-always .social-link-discord:not(.ignore-brand):not(.skip):not(.ignore) {
+    background: #7289DA;
+}
+
