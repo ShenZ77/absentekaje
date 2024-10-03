@@ -1,0 +1,19 @@
+.btn-gradient {
+  background-image: linear-gradient(to right, #1abc9c 0%, #f4d03f 51%, #1abc9c 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* lebih natural dan lembut */
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-gradient:hover {
+  background-position: right center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
